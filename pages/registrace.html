@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="../images/Logo.jpg"/>
+    <link rel="stylesheet" href="../styles/registrace.css"/>
+    <title>Registrace</title>
+    </head>
+    <body>
+    <header class="header">
+        <nav>
+            <ul class="nav-link">
+                <li><a href="../index.html">Na hlavní</a></li>
+                <li><a href="katalog.html">Designy</a></li>
+                <li><a href="kontakt.html">Kontakty</a></li>
+                <li><a href="registrace.html" class="active">Registrace</a></li>
+                <li><a href="prihlaseni.html">Přihlášení</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="wrapper">
+                <form action="#" method="POST" novalidate>
+                <h1>Registrace</h1>
+                <div id="error" class="error-msg"></div>
+                <div class="input-box">
+                    <input
+                    type="text"
+                    name="firstname"
+                    placeholder="Jméno"
+                    required
+                    autocomplete="given-name"
+                    aria-label="Jméno"
+                    />
+                </div>
+                <div class="input-box">
+                    <input
+                    type="text"
+                    name="lastname"
+                    placeholder="Příjmení"
+                    required
+                    autocomplete="family-name"
+                    aria-label="Příjmení"
+                    />
+                </div>
+                <div class="input-box">
+                    <input
+                    type="email"
+                    name="email"
+                    placeholder="E-mail"
+                    required
+                    autocomplete="email"
+                    aria-label="E-mail"
+                    />
+                </div>
+                <div class="input-box">
+                    <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Telefon (např. +420123456789)"
+                    pattern="^\+?[0-9\s\-]{7,15}$"
+                    autocomplete="tel"
+                    aria-label="Telefon"
+                    />
+                </div>
+                <div class="input-box">
+                    <input
+                    type="text"
+                    name="username"
+                    placeholder="Uživatelské jméno"
+                    required
+                    minlength="3"
+                    maxlength="32"
+                    autocomplete="username"
+                    aria-label="Uživatelské jméno"
+                    />
+                </div>
+                <div class="input-box">
+                    <input
+                    id="password"
+                    type="password"
+                    name="password"
+                    placeholder="Heslo (min. 6 znaků)"
+                    required
+                    minlength="6"
+                    autocomplete="new-password"
+                    aria-label="Heslo"
+                    />
+                    <button class="toggle-password" type="button" data-target="password" aria-label="Zobrazit/skrýt heslo">Zobrazit</button>
+                </div>
+                <div class="input-box">
+                    <input
+                    id="password2"
+                    type="password"
+                    name="password_confirm"
+                    placeholder="Potvrzení hesla"
+                    required
+                    minlength="6"
+                    autocomplete="new-password"
+                    aria-label="Potvrzení hesla"
+                    />
+                    <button class="toggle-password" type="button" data-target="password2" aria-label="Zobrazit/skrýt heslo">Zobrazit</button>
+                </div>
+                <button type="submit" class="btn">Vytvořit účet</button>
+                <div class="register-link">
+                    <p>Máte už účet? <a href="prihlaseni.html">Přihlaste se</a></p>
+                </div>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
