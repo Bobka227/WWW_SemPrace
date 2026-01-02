@@ -1,43 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../images/Logo.jpg">
+    <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/prihlaseni.css">
     <title>Přihlášení</title>
 </head>
 <body>
     <header class="header">
-        <nav>
-            <ul class="nav-link">
-                <li><a href="../index.html">Na hlavní</a></li>
-                <li><a href="katalog.html">Designy</a></li>
-                <li><a href="kontakt.html">Kontakty</a></li>
-                <li><a href="registrace.html">Registrace</a></li>
-                <li><a href="prihlaseni.html" class="active">Přihlášení</a></li>
-            </ul>
+        <nav class="nav" aria-label="Hlavní navigace">
+            <div class="nav-inner">
+                <a class="nav-home" href="../index.html" aria-label="Na hlavní">
+                    <img src="../images/home.png" alt="Domů" class="nav-home__icon">
+                </a>
+
+                <ul class="nav-link">
+                    <li><a href="katalog.html">Designy</a></li>
+                    <li><a href="registrace.html">Registrace</a></li>
+                    <li><a href="kontakt.html">Kontakty</a></li>
+                    <li><a href="prihlaseni.html" class="active">Přihlášení</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
     <main class="main">
         <div class="container">
-            <section class="wrapper">
-                <form action="">
-                    <h1>Login</h1>
-                    <div class="input-box">
-                        <input type="text" placeholder="Jmeno uživatele" required>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" placeholder="Heslo" required>
-                    </div>
-                        <div class="remember-forgot">
-                            <a href="#">Zapomněl jste heslo?</a>
+            <section class="auth-layout">
+                <div class="card">
+                    <header class="card__head">
+                        <h1>Přihlášení</h1>
+                        <p>Vítejte zpět. Přihlaste se ke svému účtu.</p>
+                    </header>
+
+                    <form class="form" action="#" method="post" novalidate>
+                        <div class="field">
+                            <label for="username">Uživatelské jméno</label>
+                            <input id="username" type="text" name="username" placeholder="Zadejte uživatelské jméno" required>
                         </div>
-                        <button type="submit" class="btn">Login</button>
-                        <div class="register-link">
-                            <p>Nemate učet? <a href="registrace.html">Registrace</a></p>
+
+                        <div class="field password">
+                            <label for="password">Heslo</label>
+                            <input id="password" type="password" name="password" placeholder="Zadejte heslo" required>
+                            <button class="toggle-password" type="button" data-target="password">Zobrazit</button>
                         </div>
-                </form>
+
+                        <div class="row">
+                            <a class="forgot" href="#">Zapomněli jste heslo?</a>
+                        </div>
+
+                        <button type="submit" class="btn">Přihlásit se</button>
+
+                        <p class="hint">Nemáte účet? <a href="registrace.html">Registrace</a></p>
+                    </form>
+                </div>
             </section>
         </div>
     </main>

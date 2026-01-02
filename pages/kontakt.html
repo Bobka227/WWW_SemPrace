@@ -1,44 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../images/Logo.jpg">
-    <link rel="stylesheet" href="../styles/kontakt.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="../images/Logo.jpg"/>
+    <link rel="stylesheet" href="../styles/kontakt.css"/>
+    <link rel="stylesheet" href="../styles/header.css">
     <title>Kontakty</title>
 </head>
 <body>
     <header class="header">
-        <nav>
-            <ul class="nav-link">
-                <li><a href="../index.html">Na hlavní</a></li>
-                <li><a href="katalog.html">Designy</a></li>
-                <li><a href="kontakt.html" class="active">Kontakty</a></li>
-                <li><a href="registrace.html">Registrace</a></li>
-                <li><a href="prihlaseni.html">Přihlášení</a></li>
-            </ul>
+        <nav class="nav" aria-label="Hlavní navigace">
+            <div class="nav-inner">
+                <a class="nav-home" href="../index.html" aria-label="Na hlavní">
+                    <img src="../images/home.png" alt="Domů" class="nav-home__icon">
+                </a>
+
+                <ul class="nav-link">
+                    <li><a href="katalog.html">Designy</a></li>
+                    <li><a href="registrace.html">Registrace</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakty</a></li>
+                    <li><a href="prihlaseni.html">Přihlášení</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
+
     <main class="main">
         <div class="container">
-            <h1>Kontakty</h1>
-            <div class="contact-info">
-                <p><strong>Adresa:</strong> Brno 201, zabrdovice</p>
-                <p><strong>Tel. čislo:</strong> +420775998723</p>
-                <p><strong>Email:</strong> info@example.com</p>
-            </div>
-        </div>
-        <div class="contact-form">
-            <h2>Máte dotaz? napište nám!</h2>
-            <form action="#" method="post">
-                <label for="name">Vaše jméno:</label>
-                <input type="text" id="name" name="name" placeholder="Zadejte jméno" required>
-                <label for="email">Váš email:</label>
-                <input type="text" id="email" name="email" placeholder="Zadejte email" required>
-                <label for="message">Zpráva:</label>
-                <textarea id="message" name="message" placeholder="Zadejte zprávu" required></textarea>
-                <button type="submit">Poslat</button>
-            </form>
+            <section class="page-head" aria-labelledby="page-title">
+                <h1 id="page-title">Kontakty</h1>
+                <p>Ozvěte se nám! Odpovíme co nejdříve</p>
+            </section>
+
+            <section class="contact-layout" aria-label="Kontaktní informace a formulář">
+                <section class="card contact-card" aria-labelledby="info-title">
+                    <header class="card__head">
+                        <h2 id="info-title">Kontaktujte nás</h2>
+                        <p>Jsme tu pro vás každý den</p>
+                    </header>
+
+                    <ul class="contact-list">
+                        <li class="contact-item">
+                            <span class="contact-label">Adresa</span>
+                            <span class="contact-value">Brno 201, Zábrdovice</span>
+                        </li>
+                        <li class="contact-item">
+                            <span class="contact-label">Telefon</span>
+                            <a class="contact-value" href="tel:+420775998723">+420 775 998 723</a>
+                        </li>
+                        <li class="contact-item">
+                            <span class="contact-label">Email</span>
+                            <a class="contact-value" href="mailto:info@example.com">info@example.com</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="card form-card" aria-labelledby="form-title">
+                    <header class="card__head">
+                        <h2 id="form-title">Máte dotaz? Napište nám!</h2>
+                        <p>Vyplňte formulář a my se vám ozveme</p>
+                    </header>
+
+                    <form class="form" action="#" method="post">
+                        <div class="field">
+                            <label for="name">Vaše jméno</label>
+                            <input type="text" id="name" name="name" placeholder="Zadejte jméno" required/>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Váš email</label>
+                            <input type="email" id="email" name="email" placeholder="Zadejte email" required/>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Zpráva</label>
+                            <textarea id="message" name="message" placeholder="Zadejte zprávu" required></textarea>
+                        </div>
+
+                        <button class="btn" type="submit">Poslat</button>
+                    </form>
+                </section>
+            </section>
         </div>
     </main>
 </body>
